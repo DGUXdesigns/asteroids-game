@@ -1,3 +1,5 @@
+import sys
+
 import pygame
 
 from circleshape import CircleShape
@@ -46,6 +48,8 @@ class Player(CircleShape):
             self.move(dt)
         if keys[pygame.K_SPACE]:
             self.shoot()
+        if keys[pygame.K_q]:
+            sys.exit()
 
     def move(self, dt):
         unit_vector = pygame.Vector2(0, 1)
